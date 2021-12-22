@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFH</title>
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <div class="container">
+    <header>
+      <p>hair salon</p>
+      <div class="flex">
+        <h1>
+          <a href="">
+            <img src="img/logo@2x.png" alt="ロゴ">
+          </a>
+        </h1>
+        <p>
+          open <br>
+          10:00~19:00
+        </p>
+      </div>
+    </header>
+  </div>
+    <!-- フロアナビゲーション -->
+    <div class="container">
+      <ol>
+        <li>
+          <div class="circle">
+            <p>1</p>
+          </div>
+          <p>メニュー選択</p>
+        </li>
+        <li>
+          <div class="circle">
+            <p>2</p>
+          </div>
+          <p>日時指定</p>
+        </li>
+        <li>
+          <div class="circle">
+            <p>3</p>
+          </div>
+          <p>情報入力</p>
+        </li>
+        <li>
+          <div class="circle">
+            <p>4</p>
+          </div>
+          <p>予約確認</p>
+        </li>
+        <li>
+          <div class="circle">
+            <p>5</p>
+          </div>
+          <p>予約完了</p>
+        </li>
+      </ol>
+
+      <!-- フォーム -->
+      <p class="explanation">お客様の情報をご入力ください</p>
+      <form action="/form.php" method="post">
+        <div class="flex">
+          <label for="name">お名前<span>必須</span></label>
+          <input type="text" id="name" name="name" value="" placeholder="山田 太郎">
+        </div>
+        <div class="flex">
+          <label for="name">フリガナ<span>必須</span></label>
+          <input type="text" id="furigana" name="furigana" value="" placeholder="ヤマダ タロウ">
+        </div>
+        <div class="flex">
+          <label for="tel">電話番号<span>必須</span></label>
+          <input type="tel" id="tel" name="tel" value="" placeholder="09000000000">
+        </div>
+        <div class="flex">
+          <label for="email">メールアドレス<span>必須</span></label>
+          <input type="email" id="email" name="email" value="" placeholder="mail@example.com">
+        </div>
+
+        <div class="radio flex">
+          <p>性別</p>
+          <div>
+            <input type="radio" name="gender" value="female" checked>
+            <label for="female">女性</label>
+            <input type="radio" name="gender" value="male">
+            <label for="male">男性</label>
+          </div>
+        </div>
+        <div class="radio flex">
+          <p>ご来店は初めてですか？<span>必須</span></p>
+          <div>
+            <input type="radio" name="visit" value="yes" checked>
+            <label for="yes">はい</label>
+            <input type="radio" name="visit" value="no">
+            <label for="no">いいえ</label>
+          </div>
+
+        </div>
+
+        <div class="textarea">
+          <label for="message">備考（ご要望・ご相談）</label>
+          <textarea id="message" name="message" placeholder="ご要望・ご相談"></textarea>
+        </div>
+
+        <div class="privacy">
+          <p>
+            <a href="">利用規約</a>/
+            <a href="">プライバシーポリシー</a>
+          </p>
+        </div>
+
+        <div class="btn">
+          <button type="button" onclick="history.back(-1)">戻る</button>
+          <div class="submit">
+            <input type="submit" v.alue="この内容で次へ">
+          </div>
+        </div>
+    </div>
+
+    <a href="#" id="page-top">
+      <img src="img/top-btn@2x.png" alt="">
+    </a>
+    <!-- フッター -->
+    <footer class="bgc-wrap">
+      <p><small>&copy; 2021 MFH</small></p>
+    </footer>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
